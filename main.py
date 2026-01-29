@@ -136,16 +136,26 @@ class PipelineOrchestrator:
         }
         self.results.append(result_record)
         
-        # Step 4: Generate summary table
+       # Step 4: Generating summary table
         print("\n[STEP 4] GENERATING SUMMARY TABLE")
         print("-" * 70)
-        
+
         results_df = pd.DataFrame(self.results)
+
+# Map internal technique codes to human‑readable names
+        tech_name_map = {
+            'Sampling1': 'Random',
+            'Sampling2': 'Stratified',
+            'Sampling3': 'Cluster',
+            'Sampling4': 'Systematic',
+            'Sampling5_KFold': 'K-Fold'
+        }   
+        results_df['Sampling_Technique'] = results_df['Sampling_Technique'].replace(tech_name_map)
+
         print("\n" + results_df.to_string(index=False))
-        
-        # Save to CSV
         results_df.to_csv('results.csv', index=False)
         print("\n[✓] Results saved to 'results.csv'")
+
         
         # Step 5: Analysis and insights
         print("\n[STEP 5] ANALYSIS & INSIGHTS")

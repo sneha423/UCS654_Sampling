@@ -1,6 +1,6 @@
 Sample_ID,Sampling_Technique,Best_Model,Accuracy,Generalization_Gap,Overfitting_Status
-Sample_1,Sampling1,M4_XGBoost,0.9935,0.0,Low
-Sample_2,Sampling2,M4_XGBoost,0.9935,0.0,Low
-Sample_3,Sampling3,M2_RandomForest,0.9484,0.0,Low
-Sample_4,Sampling4,M4_XGBoost,0.9871,0.0,Low
-Sample_5,Sampling5_KFold,M5_LightGBM,0.9975400000000001,N/A (Cross-validation),Controlled
+Sample_1,Random,M4_XGBoost,0.9935,0.0,Low
+Sample_2,Stratified,M4_XGBoost,0.9935,0.0,Low
+Sample_3,Cluster,M2_RandomForest,0.9484,0.0,Low
+Sample_4,Systematic,M4_XGBoost,0.9871,0.0,Low
+Sample_5,K-Fold,M5_LightGBM,0.9975400000000001,N/A (Cross-validation),Controlled
