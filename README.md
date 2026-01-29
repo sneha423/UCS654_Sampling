@@ -81,22 +81,25 @@ How to Run
 bash
 
 1. Create and activate virtual environment (optional but recommended)
-
+```
 python -m venv venv
+```
+Windows:
+```venv\Scripts\activate```
 
-Windows: venv\Scripts\activate
-
-Linux/Mac: source venv/bin/activate
+Linux/Mac:
+```source venv/bin/activate```
 
 2. Install dependencies
 
-pip install -r requirements.txt
-
+```pip install -r requirements.txt
+```
 3. Ensure Creditcard_data.csv is in the project root
 
 4. Run the pipeline
 
-python main.py
+```python main.py```
+
 On completion, results.csv will contain one row per sampling technique.
 
 Output
